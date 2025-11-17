@@ -1,84 +1,193 @@
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap');
-
-/* Color Theme */
-:root {
-    --chocolate: #4a2e2a;
-    --light-cream: #f7f3ef;
-    --soft-brown: #a68b7c;
-    --dark-text: #2e2a28;
-}
+/* ====== GENERAL PAGE STYLING ====== */
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--light-cream);
-    color: var(--dark-text);
+    font-family: 'Georgia', serif;
+    background-color: #f7f2ed;
+    color: #3b2f2f;
     margin: 0;
     padding: 0;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
+h1, h2, h3 {
+    margin: 0 0 10px;
+    font-weight: 700;
+    color: #3b2f2f;
+}
+
+p, li {
+    font-family: "Inter", sans-serif;
+    color: #4a3c3c;
+}
+
+/* ====== HEADER ====== */
+
 header {
+    background-color: #3b2f2f;
+    color: #f7f2ed;
+    padding: 40px 20px;
     text-align: center;
-    padding: 3rem 1rem 2rem;
-    background-color: var(--chocolate);
-    color: white;
 }
 
 header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    margin: 0;
+    font-size: 2.6rem;
+    margin-bottom: 8px;
 }
 
-.subtitle {
+header h2 {
     font-size: 1.2rem;
+    font-weight: 300;
     opacity: 0.9;
-    margin-top: 0.5rem;
 }
+
+/* ====== NAVIGATION ====== */
 
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem;
-    background: var(--soft-brown);
+    background-color: #5a4238;
+    padding: 10px 0;
+    text-align: center;
 }
 
 nav a {
-    color: white;
+    color: #f7f2ed;
     text-decoration: none;
+    margin: 0 15px;
+    font-family: "Inter", sans-serif;
     font-weight: 500;
+    transition: 0.2s;
 }
+
+nav a:hover {
+    opacity: 0.75;
+}
+
+/* ====== SECTIONS ====== */
 
 section {
+    width: 85%;
     max-width: 900px;
-    margin: 2.5rem auto;
-    padding: 0 1rem;
+    margin: 40px auto;
+    padding-bottom: 20px;
 }
 
-h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: var(--chocolate);
+section h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #b98564;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
-.skill-category, .project, .edu-entry {
-    margin-bottom: 1.5rem;
+/* ====== SKILLS LIST ====== */
+
+.skills-category {
+    margin-bottom: 18px;
 }
 
-.skill-category ul, .project ul {
-    list-style-type: disc;
-    margin-left: 1.5rem;
+.skills-category h3 {
+    color: #5a4238;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
+.skills-category ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.skills-category ul li {
+    margin-bottom: 4px;
+}
+
+/* ====== PROJECT CARDS ====== */
+
+.project {
+    background: #fff;
+    border-left: 5px solid #b98564;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+.project h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+/* GitHub links */
 .project a {
-    color: var(--chocolate);
-    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    color: #6a4a3c;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
-#contact a {
-    color: var(--chocolate);
+.project a:hover {
+    color: #b98564;
+}
+
+/* “Coming Soon” disabled link */
+.coming-soon {
+    opacity: 0.6;
+    pointer-events: none;
+    cursor: default;
+    font-style: italic;
+}
+
+/* ====== IN PROGRESS BADGE ====== */
+
+.badge {
+    background-color: #b98564; 
+    color: #fff8f0;
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    margin-left: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* ====== CONTACT SECTION ====== */
+
+.contact a {
+    color: #6a4a3c;
+    font-weight: 600;
     text-decoration: none;
-    font-weight: 500;
+}
+
+.contact a:hover {
+    color: #b98564;
+}
+
+/* ====== FOOTER ====== */
+
+footer {
+    background-color: #3b2f2f;
+    color: #f7f2ed;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* ====== RESPONSIVE ====== */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        width: 92%;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .project {
+        padding: 12px 15px;
+    }
 }
