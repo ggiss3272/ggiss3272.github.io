@@ -1,82 +1,84 @@
-/* Global Styling */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap');
+
+/* Color Theme */
+:root {
+    --chocolate: #4a2e2a;
+    --light-cream: #f7f3ef;
+    --soft-brown: #a68b7c;
+    --dark-text: #2e2a28;
+}
+
 body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-cream);
+    color: var(--dark-text);
     margin: 0;
     padding: 0;
-    background: #f3efea;
-    font-family: 'Inter', sans-serif;
-    color: #5a5046;
     line-height: 1.7;
 }
 
-/* Header */
 header {
     text-align: center;
-    padding: 80px 20px 40px;
+    padding: 3rem 1rem 2rem;
+    background-color: var(--chocolate);
+    color: white;
 }
 
 header h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 64px;
-    font-weight: 700;
-    color: #4a3f35;
+    font-size: 3rem;
     margin: 0;
 }
 
-header p {
-    font-size: 18px;
-    margin-top: 10px;
-    color: #6a5e54;
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-top: 0.5rem;
 }
 
-/* Nav */
 nav {
-    text-align: center;
-    padding: 15px;
-    border-top: 1px solid #c7b8a6;
-    border-bottom: 1px solid #c7b8a6;
-    background: #f7f4f0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    background: var(--soft-brown);
 }
 
 nav a {
-    margin: 0 15px;
+    color: white;
     text-decoration: none;
-    color: #8a7364;
     font-weight: 500;
-    letter-spacing: 0.5px;
 }
 
-nav a:hover {
-    color: #4a3f35;
+section {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 0 1rem;
 }
 
-/* Sections */
-.section {
-    max-width: 850px;
-    margin: 60px auto;
-    padding: 20px 30px;
-}
-
-.section h2 {
+h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: #4a3f35;
+    font-size: 2rem;
+    color: var(--chocolate);
 }
 
-.section p, .section li {
-    font-size: 17px;
+.skill-category, .project, .edu-entry {
+    margin-bottom: 1.5rem;
 }
 
-/* Lists */
-ul {
-    padding-left: 20px;
+.skill-category ul, .project ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
 }
 
-a {
-    color: #8a7364;
+.project a {
+    color: var(--chocolate);
+    font-weight: bold;
+}
+
+#contact a {
+    color: var(--chocolate);
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    font-weight: 500;
 }
